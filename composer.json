@@ -1,0 +1,55 @@
+{
+    "name": "gess32/fastspring-sdk-for-laravel",
+    "description": "A Laravel SDK for integrating with the FastSpring payment system.",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [
+        "fastspring",
+        "laravel",
+        "sdk",
+        "api"
+    ],
+    "autoload": {
+        "psr-4": {
+            "Gess32\\FastspringSdk\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Gess32\\FastspringSdk\\Test\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "GESS32",
+            "role": "Developer"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": "^7.4|^8.0",
+        "ext-json": "*",
+        "illuminate/support": "^8.0|^9.0|^10.0|^11.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.0|^9.0|^10.0|^11.0",
+        "orchestra/testbench": "^4.6|^5.0|^6.0|^8.0|^9.0"
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Gess32\\FastSpringSdk\\FastspringServiceProvider"
+            ],
+            "aliases": {
+                "FastSpring": "Gess32\\FastSpringSdk\\Facades\\Fastspring"
+            }
+        }
+    }
+}
